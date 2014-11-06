@@ -24,12 +24,17 @@ set shell=sh
 " vim-plug
 call plug#begin('~/.vim/bundle')
 
+Plug 'scrooloose/nerdtree'
+Plug 'kien/ctrlp.vim'
 Plug 'fatih/vim-go'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'evidens/vim-twig'
 Plug 'Shutnik/jshint2.vim'
 
 call plug#end()
+
+" NERDTree bind to F2
+map <F2> :NERDTreeToggle<CR>
 
 " Apply twig templates to swig files
 au BufReadPost *.swig set syntax=twig
