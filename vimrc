@@ -6,6 +6,7 @@ set shiftwidth=4
 set tabstop=4
 
 " Interface
+set guifont=DejaVu_Sans_Mono:h12
 set hidden
 set hlsearch
 set nowrap
@@ -25,7 +26,8 @@ set shell=sh
 call plug#begin('~/.vim/bundle')
 
 Plug 'scrooloose/nerdtree'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'fatih/vim-go'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'evidens/vim-twig'
@@ -38,3 +40,8 @@ map <F2> :NERDTreeToggle<CR>
 
 " Apply twig templates to swig files
 au BufReadPost *.swig set syntax=twig
+
+" Useful for developing color themes
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+			\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+			\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
