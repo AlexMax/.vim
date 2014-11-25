@@ -18,6 +18,9 @@ set wildmode=longest:full,full
 set background=dark
 syntax enable
 colorscheme sunburst
+if has('gui_macvim')
+	set transparency=10
+endif
 
 " Commands that shell out tend to assume a bourne shell
 set shell=sh
