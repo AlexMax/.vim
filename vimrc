@@ -35,13 +35,17 @@ Plug 'Shutnik/jshint2.vim'
 
 call plug#end()
 
-" NERDTree bind to F2
+" NERDTree
 map <F2> :NERDTreeToggle<CR>
 
-" Apply twig templates to swig files
+" ctrlp
+autocmd VimEnter * unmap <c-p>|map <c-p> :CtrlPMixed<CR>
+
+" vim-twig
 au BufReadPost *.swig set syntax=twig
+au BufReadPost *.tpl set syntax=twig
 
 " Useful for developing color themes
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-			\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-			\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+	\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+	\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
