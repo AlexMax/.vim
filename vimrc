@@ -2,6 +2,7 @@ set nocompatible
 
 " Text editing
 set backspace=indent,eol,start
+set cino=:0 " No indent for case:/default:
 set shiftwidth=4
 set tabstop=4
 
