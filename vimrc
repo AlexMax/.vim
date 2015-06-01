@@ -40,10 +40,10 @@ Plug 'Shutnik/jshint2.vim'
 call plug#end()
 
 " NERDTree
-map <F2> :NERDTreeToggle<CR>
+map <c-\> :NERDTreeToggle<CR>
 
 " ctrlp
-autocmd VimEnter * unmap <c-p>|map <c-p> :CtrlPMixed<CR>
+autocmd VimEnter * silent! unmap <c-p>|map <c-p> :CtrlPMixed<CR>
 
 " vim-twig
 au BufReadPost *.swig set syntax=twig
