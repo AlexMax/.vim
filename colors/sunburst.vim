@@ -4,6 +4,8 @@
 "
 " Supports 16-color terminals, 256-color xterms and GUI.  It's most likely
 " broken on 88-color rxvt and non-recent versions of vim, patches welcome.
+"
+" Color names courtesy of http://chir.ag/projects/name-that-color
 
 set background=dark
 highlight clear
@@ -43,6 +45,7 @@ let s:G_Apple='#65B042'         " String
 let s:G_Mamba='#9B859D'         " Support
 let s:G_RoyalBlue='#3E87E3'     " Variable
 let s:G_Primrose='#DDF2A4'      " String Constant
+let s:G_Porsche='#CF7D34'       " String Regex
 let s:G_Brandy='#DAD085'        " Support (Function)
 let s:G_PigeonPost='#AFC4DB'    " Preprocessor Directive
 
@@ -77,6 +80,7 @@ if &t_Co == 256
 	let s:T_Mamba='139'
 	let s:T_RoyalBlue='68'
 	let s:T_Primrose='193'
+	let s:T_Porsche='179'
 	let s:T_Brandy='186'
 	let s:T_PigeonPost='152'
 else
@@ -93,6 +97,7 @@ else
 	let s:T_Mamba='Magenta'
 	let s:T_RoyalBlue='Blue'
 	let s:T_Primrose='Green'
+	let s:T_Porsche='Yellow'
 	let s:T_Brandy='Yellow'
 	let s:T_PigeonPost='Blue'
 endif
@@ -124,6 +129,17 @@ exe 'hi Type gui=NONE ctermfg='.s:T_Conifer.' guifg='.s:G_Conifer
 " Mode-specific syntax highlighting
 exe 'hi phpFunctions ctermfg='.s:T_Brandy.' guifg='.s:G_Brandy
 exe 'hi pythonBuiltin ctermfg='.s:T_Brandy.' guifg='.s:G_Brandy
+exe 'hi rubyClass ctermfg='.s:T_Terracotta.''.s:G_Terracotta
+exe 'hi rubyDefine ctermfg='.s:T_Terracotta.''.s:G_Terracotta
+exe 'hi rubyInclude ctermfg='.s:T_Terracotta.''.s:G_Terracotta
+exe 'hi rubyInterpolation ctermfg='.s:T_Primrose.' guifg='.s:G_Primrose
+exe 'hi rubyInterpolationDelimiter ctermfg='.s:T_Primrose.' guifg='.s:G_Primrose
+exe 'hi rubyRegexp ctermfg='.s:T_Porsche.' guifg='.s:G_Porsche
+exe 'hi rubyRegexpAnchor ctermfg='.s:T_Porsche.' guifg='.s:G_Porsche
+exe 'hi rubyRegexpCharClass ctermfg='.s:T_Porsche.' guifg='.s:G_Porsche
+exe 'hi rubyRegexpDelimiter ctermfg='.s:T_Porsche.' guifg='.s:G_Porsche
+exe 'hi rubyRegexpQuantifier ctermfg='.s:T_Porsche.' guifg='.s:G_Porsche
+exe 'hi rubyStringDelimiter ctermfg='.s:T_Apple.' guifg='.s:G_Apple
 
 " Plugin-specific syntax highlighting
 "   vim-cpp-enhanced-highlight by Jon Haggblad
