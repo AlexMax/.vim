@@ -45,7 +45,7 @@ let s:G_Apple='#65B042'         " String
 let s:G_Mamba='#9B859D'         " Support
 let s:G_RoyalBlue='#3E87E3'     " Variable
 let s:G_Primrose='#DDF2A4'      " String Constant
-let s:G_Porsche='#CF7D34'       " String Regex
+let s:G_Porsche='#E9C062'       " String Regex
 let s:G_Brandy='#DAD085'        " Support (Function)
 let s:G_PigeonPost='#AFC4DB'    " Preprocessor Directive
 
@@ -128,10 +128,11 @@ exe 'hi Type gui=NONE ctermfg='.s:T_Conifer.' guifg='.s:G_Conifer
 
 " Mode-specific syntax highlighting
 exe 'hi phpFunctions ctermfg='.s:T_Brandy.' guifg='.s:G_Brandy
+exe 'hi phpVarSelector ctermfg='.s:T_RoyalBlue.' guifg='.s:G_RoyalBlue
 exe 'hi pythonBuiltin ctermfg='.s:T_Brandy.' guifg='.s:G_Brandy
-exe 'hi rubyClass ctermfg='.s:T_Terracotta.''.s:G_Terracotta
-exe 'hi rubyDefine ctermfg='.s:T_Terracotta.''.s:G_Terracotta
-exe 'hi rubyInclude ctermfg='.s:T_Terracotta.''.s:G_Terracotta
+exe 'hi rubyClass ctermfg='.s:T_Terracotta.' guifg='.s:G_Terracotta
+exe 'hi rubyDefine ctermfg='.s:T_Terracotta.' guifg='.s:G_Terracotta
+exe 'hi rubyInclude ctermfg='.s:T_Terracotta.' guifg='.s:G_Terracotta
 exe 'hi rubyInterpolation ctermfg='.s:T_Primrose.' guifg='.s:G_Primrose
 exe 'hi rubyInterpolationDelimiter ctermfg='.s:T_Primrose.' guifg='.s:G_Primrose
 exe 'hi rubyRegexp ctermfg='.s:T_Porsche.' guifg='.s:G_Porsche
