@@ -127,7 +127,11 @@ exe 'hi Statement gui=NONE ctermfg='.s:T_Terracotta.' guifg='.s:G_Terracotta
 exe 'hi Type gui=NONE ctermfg='.s:T_Conifer.' guifg='.s:G_Conifer
 
 " Mode-specific syntax highlighting
+exe 'hi phpClass ctermfg='.s:T_Malibu.' guifg='.s:G_Malibu
+exe 'hi phpDefine ctermfg='.s:T_Conifer.' guifg='.s:G_Conifer
+exe 'hi phpFunction ctermfg='.s:T_Malibu.' guifg='.s:G_Malibu
 exe 'hi phpFunctions ctermfg='.s:T_Brandy.' guifg='.s:G_Brandy
+exe 'hi phpParent ctermfg='.s:T_Alabaster.' guifg='.s:G_Alabaster
 exe 'hi phpVarSelector ctermfg='.s:T_RoyalBlue.' guifg='.s:G_RoyalBlue
 exe 'hi pythonBuiltin ctermfg='.s:T_Brandy.' guifg='.s:G_Brandy
 exe 'hi rubyClass ctermfg='.s:T_Terracotta.' guifg='.s:G_Terracotta

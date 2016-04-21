@@ -43,6 +43,7 @@ Plug 'fatih/vim-go'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'evidens/vim-twig'
 Plug 'Shutnik/jshint2.vim'
+Plug 'StanAngeloff/php.vim'
 
 call plug#end()
 
