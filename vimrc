@@ -44,6 +44,7 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'evidens/vim-twig'
 Plug 'Shutnik/jshint2.vim'
 Plug 'StanAngeloff/php.vim'
+Plug 't-yuki/vim-go-coverlay'
 
 call plug#end()
 
@@ -56,6 +57,9 @@ autocmd VimEnter * silent! unmap <c-p>|map <c-p> :CtrlPMixed<CR>
 " vim-twig
 au BufReadPost *.swig set syntax=twig
 au BufReadPost *.tpl set syntax=twig
+
+" vim-go
+let g:go_fmt_command = "goimports"
 
 " Useful for developing color themes
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
