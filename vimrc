@@ -10,6 +10,7 @@ set tabstop=4
 set guifont=DejaVu_Sans_Mono:h12
 set hidden
 set hlsearch
+set listchars=tab:»\ ,eol:¬,space:·
 set nowrap
 set ruler
 set wildmenu

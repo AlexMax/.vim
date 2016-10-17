@@ -68,9 +68,11 @@ else
 endif
 
 " Base vim color scheme
+exe 'hi Cursor guibg='.s:G_SyntaxAccent
 exe 'hi Normal ctermfg='.s:T_SyntaxFG.' guifg='.s:G_SyntaxFG.' guibg='.s:G_SyntaxBG
 exe 'hi LineNr ctermfg='.s:T_SyntaxGutter.' guifg='.s:G_SyntaxGutter
 exe 'hi NonText ctermfg='.s:T_SyntaxGuide.' guifg='.s:G_SyntaxGuide
+exe 'hi SpecialKey ctermfg='.s:T_SyntaxGuide.' guifg='.s:G_SyntaxGuide
 
 " Base vim syntax highlighting
 exe 'hi Comment ctermfg='.s:T_Mono3.' gui=Italic guifg='.s:G_Mono3
@@ -95,8 +97,12 @@ exe 'hi pythonBuiltin ctermfg='.s:T_Hue1.' guifg='.s:G_Hue1
 exe 'hi pythonFunction ctermfg='.s:T_Hue2.' guifg='.s:G_Hue2
 exe 'hi rubyAccess ctermfg='.s:T_Hue2.' guifg='.s:G_Hue2
 exe 'hi rubyAttribute ctermfg='.s:T_Hue2.' guifg='.s:G_Hue2
+exe 'hi rubyBlockParameterList ctermfg='.s:T_Hue5.' guifg='.s:G_Hue5
+exe 'hi rubyClass ctermfg='.s:T_Hue3.' guifg='.s:G_Hue3
 exe 'hi rubyConstant ctermfg='.s:T_Hue6.' guifg='.s:G_Hue6
+exe 'hi rubyDefine ctermfg='.s:T_Hue3.' guifg='.s:G_Hue3
 exe 'hi rubyFunction ctermfg='.s:T_Hue2.' guifg='.s:G_Hue2
+exe 'hi rubyInclude ctermfg='.s:T_Hue2.' guifg='.s:G_Hue2
 exe 'hi rubyInterpolation ctermfg='.s:T_Hue4.' guifg='.s:G_Hue4
 exe 'hi rubyInterpolationDelimiter ctermfg='.s:T_Hue52.' guifg='.s:G_Hue52
 exe 'hi rubyLocalVariableOrMethod ctermfg='.s:T_Hue1.' guifg='.s:G_Hue1
