@@ -10,9 +10,15 @@ set tabstop=4
 set guifont=DejaVu_Sans_Mono:h12
 set hidden
 set hlsearch
-set listchars=tab:»\ ,eol:¬,space:·
+set incsearch
+if has("patch-7.4.710")
+	set listchars=tab:»\ ,eol:¬,space:·
+else
+	set listchars=tab:»\ ,eol:¬
+endif
 set nowrap
 set ruler
+set showcmd
 set wildmenu
 set wildmode=longest:full,full
 
