@@ -51,7 +51,9 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'evidens/vim-twig'
 Plug 'Shutnik/jshint2.vim'
 Plug 'StanAngeloff/php.vim'
-Plug 't-yuki/vim-go-coverlay'
+Plug 'mileszs/ack.vim'
+Plug 'LucHermitte/lh-vim-lib'
+Plug 'LucHermitte/local_vimrc'
 
 call plug#end()
 
@@ -59,7 +61,8 @@ call plug#end()
 map <c-\> :NERDTreeToggle<CR>
 
 " ctrlp
-autocmd VimEnter * silent! unmap <c-p>|map <c-p> :CtrlPMixed<CR>
+let g:ctrlp_follow_symlinks = 2
+map <c-r> :CtrlPTag<CR>
 
 " vim-twig
 au BufReadPost *.swig set syntax=twig
@@ -67,6 +70,9 @@ au BufReadPost *.tpl set syntax=twig
 
 " vim-go
 let g:go_fmt_command = "goimports"
+
+" ack.vim
+let g:ackprg = 'pt'
 
 " Useful for developing color themes
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'

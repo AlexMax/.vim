@@ -33,6 +33,9 @@ let s:G_Primrose='#DDF2A4'      " String Constant
 let s:G_Porsche='#E9C062'       " String Regex
 let s:G_Brandy='#DAD085'        " Support (Function)
 let s:G_PigeonPost='#AFC4DB'    " Preprocessor Directive
+let s:G_Aubergine='#420E09'     " Diff (Deleted)
+let s:G_Bronzetone='#4A410D'    " Diff (Changed)
+let s:G_GreenKelp='#253B22'     " Diff (Inserted)
 
 if &t_Co == 256
 	let s:T_Alabaster='231'
@@ -51,6 +54,9 @@ if &t_Co == 256
 	let s:T_Porsche='179'
 	let s:T_Brandy='186'
 	let s:T_PigeonPost='153'
+	let s:T_Aubergine='52'
+	let s:T_Bronzetone='58'
+	let s:T_GreenKelp='22'
 else
 	let s:T_Alabaster='White'
 	let s:T_OuterSpace='DarkGray'
@@ -68,6 +74,9 @@ else
 	let s:T_Porsche='Yellow'
 	let s:T_Brandy='Yellow'
 	let s:T_PigeonPost='Blue'
+	let s:T_Aubergine='Red'
+	let s:T_Bronzetone='Yellow'
+	let s:T_GreenKelp='Green'
 endif
 
 " Base vim color scheme
@@ -88,6 +97,9 @@ exe 'hi Comment ctermfg='.s:T_SilverChalice.' gui=Italic guifg='.s:G_SilverChali
 exe 'hi link Character String'
 exe 'hi Constant ctermfg='.s:T_Mariner.' guifg='.s:G_Mariner
 exe 'hi link Delimiter Normal'
+exe 'hi DiffAdd ctermfg='.s:T_Alabaster.' guifg='.s:G_Alabaster.' ctermbg='.s:T_GreenKelp.' guibg='.s:G_GreenKelp
+exe 'hi DiffChange ctermfg='.s:T_Alabaster.' guifg='.s:G_Alabaster.' ctermbg='.s:T_Bronzetone.' guibg='.s:G_Bronzetone
+exe 'hi DiffDelete ctermfg='.s:T_Alabaster.' guifg='.s:G_Alabaster.' ctermbg='.s:T_Aubergine.' guibg='.s:G_Aubergine
 exe 'hi Function ctermfg='.s:T_Malibu.' guifg='.s:G_Malibu
 exe 'hi Identifier cterm=NONE ctermfg='.s:T_RoyalBlue.' guifg='.s:G_RoyalBlue
 exe 'hi PreProc ctermfg='.s:T_PigeonPost.' guifg='.s:G_PigeonPost
@@ -97,6 +109,11 @@ exe 'hi Statement gui=NONE ctermfg='.s:T_Terracotta.' guifg='.s:G_Terracotta
 exe 'hi Type gui=NONE ctermfg='.s:T_Conifer.' guifg='.s:G_Conifer
 
 " Mode-specific syntax highlighting
+hi link diffAdded DiffAdd
+hi link diffRemoved DiffDelete
+exe 'hi phpDefine ctermfg='.s:T_Conifer.' guifg='.s:G_Conifer
+exe 'hi phpFunctions ctermfg='.s:T_Brandy.' guifg='.s:G_Brandy
+exe 'hi phpVarSelector ctermfg='.s:T_RoyalBlue.' guifg='.s:G_RoyalBlue
 exe 'hi phpDefine ctermfg='.s:T_Conifer.' guifg='.s:G_Conifer
 exe 'hi phpFunctions ctermfg='.s:T_Brandy.' guifg='.s:G_Brandy
 exe 'hi phpVarSelector ctermfg='.s:T_RoyalBlue.' guifg='.s:G_RoyalBlue
