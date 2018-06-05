@@ -1,4 +1,5 @@
 set nocompatible
+filetype indent plugin on
 
 " Text editing
 set backspace=indent,eol,start
@@ -7,7 +8,8 @@ set shiftwidth=4
 set tabstop=4
 
 " Interface
-set guifont=DejaVu_Sans_Mono:h12
+set guifont=Source_Code_Pro:h12
+"set guifont=DejaVu_Sans_Mono:h12
 set hidden
 set hlsearch
 set incsearch
@@ -27,6 +29,7 @@ set background=dark
 syntax enable
 colorscheme sunburst
 if has('gui_macvim')
+	set lines=24 columns=80
 	set transparency=10
 endif
 
@@ -54,6 +57,7 @@ Plug 'StanAngeloff/php.vim'
 Plug 'mileszs/ack.vim'
 Plug 'LucHermitte/lh-vim-lib'
 Plug 'LucHermitte/local_vimrc'
+Plug 'chr4/nginx.vim'
 
 call plug#end()
 
@@ -72,7 +76,7 @@ au BufReadPost *.tpl set syntax=twig
 let g:go_fmt_command = "goimports"
 
 " ack.vim
-let g:ackprg = 'pt'
+let g:ackprg = 'ag'
 
 " Useful for developing color themes
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
