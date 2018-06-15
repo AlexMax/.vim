@@ -4,10 +4,13 @@ filetype indent plugin on
 " Text editing
 set backspace=indent,eol,start
 set cino=:0 " No indent for case:/default:
+set formatoptions=tcqj
 set shiftwidth=4
 set tabstop=4
 
 " Interface
+set display=lastline
+set fillchars=vert:│
 set guifont=Source_Code_Pro:h12
 "set guifont=DejaVu_Sans_Mono:h12
 set hidden
@@ -21,6 +24,7 @@ endif
 set nowrap
 set ruler
 set showcmd
+set sidescroll=1
 set wildmenu
 set wildmode=longest:full,full
 
